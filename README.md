@@ -8,6 +8,7 @@ cd CMSSW_12_3_0_pre6/src
 cmsenv
 git clone https://github.com/chrispap95/SUEPGen.git
 scram b
+voms-proxy-init -voms cms
 
 cmsDriver.py SUEPGen/Generator/SUEPdarkPho_cff \
     -s GEN,SIM -n 10 \
