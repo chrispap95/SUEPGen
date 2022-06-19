@@ -1,11 +1,12 @@
 # SUEPGen
 
-To generate:
+To generate SUEP samples:
 
 ```bash
 cmsrel CMSSW_12_3_0_pre6
 cd CMSSW_12_3_0_pre6/src
 cmsenv
+git clone https://github.com/chrispap95/SUEPGen.git
 scram b
 
 cmsDriver.py SUEPGen/Generator/SUEPdarkPho_cff  -s GEN,SIM -n 10 --conditions auto:phase1_2021_realistic --beamspot Run3RoundOptics25ns13TeVLowSigmaZ --datatier GEN-SIM --eventcontent RAWSIM --geometry DB:Extended --era Run3 --fileout file:step1.root
