@@ -24,7 +24,7 @@ cmsDriver.py step2 \
     --datatier GEN-SIM-DIGI-RAW --eventcontent RAWSIM \
     --geometry DB:Extended --era Run3 \
     --pileup Run3_Flat55To75_PoissonOOTPU \
-    --pileup_input das:/RelValMinBias_14TeV/CMSSW_12_0_0_pre4-120X_mcRun3_2021_realistic_v2-v1/GEN-SIM \
+    --pileup_input das:/RelValMinBias_14TeV/CMSSW_12_3_0_pre6-123X_mcRun3_2021_realistic_v11-v1/GEN-SIM \
     --filein  file:step1.root --fileout file:step2.root
 ```
 
