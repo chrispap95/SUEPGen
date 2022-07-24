@@ -4,8 +4,8 @@ To generate SUEP samples:
 
 **New instructions:**
 ```bash
-cmsrel CMSSW_12_4_1
-cd CMSSW_12_4_1/src
+cmsrel CMSSW_12_4_3
+cd CMSSW_12_4_3/src
 cmsenv
 git clone https://github.com/chrispap95/SUEPGen.git
 scram b
@@ -14,7 +14,7 @@ cmsDriver.py SUEPGen/Generator/SUEPdarkPho_cff \
     -s GEN,SIM -n 20 \
     --datatier GEN-SIM --eventcontent RAWSIM \
     --conditions auto:phase1_2022_realistic \
-    --beamspot Run3RoundOptics25ns13TeVLowSigmaZ \
+    --beamspot Realistic25ns13p6TeVEarly2022Collision \
     --geometry DB:Extended --era Run3 \
     --fileout file:step1.root
 
