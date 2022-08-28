@@ -25,7 +25,13 @@ generator = cms.EDFilter("Pythia8ConcurrentGeneratorFilter",
         processParameters = cms.vstring(
             'Check:event = off',
             # parameters for mediator (Higgs)
-            'HiggsSM:all = on',
+            'Higgs:useBSM = on',
+            'HiggsBSM:gg2H1 = on',
+            'HiggsH1:coup2d = 1',
+            'HiggsH1:coup2u = 0',
+            'HiggsH1:coup2Z = 0',
+            'HiggsH1:coup2W = 0',
+            'HiggsH1:coup2l = 0',
             '25:m0 = 400.0',
             # add a dark meson and dark photon 
             '999999:all = GeneralResonance void 0 0 0 2.0 0.001 0.0 0.0 0.0',
