@@ -32,15 +32,15 @@ generator = cms.EDFilter("Pythia8ConcurrentGeneratorFilter",
             'HiggsH1:coup2Z = 0',
             'HiggsH1:coup2W = 0',
             'HiggsH1:coup2l = 0',
-            '25:m0 = 400.0',
-            # add a dark meson and dark photon 
+            '25:m0 = 500.0',
+            # add a dark meson and dark photon
             '999999:all = GeneralResonance void 0 0 0 2.0 0.001 0.0 0.0 0.0',
-            '999998:all = GeneralResonance void 1 0 0 0.5 0.001 0.0 0.0 0.0',
+            '999998:all = GeneralResonance void 1 0 0 0.7 0.001 0.0 0.0 0.0',
             # define dark meson decay
             '999999:addChannel = 1 1.0 101 999998 999998', # 100% br to dark photons
-            '999998:addChannel = 1 0.40 101 11 -11',
-            '999998:addChannel = 1 0.40 101 13 -13',
-            '999998:addChannel = 1 0.20 101 211 -211',
+            '999998:addChannel = 1 0.15 101 11 -11',
+            '999998:addChannel = 1 0.15 101 13 -13',
+            '999998:addChannel = 1 0.70 101 211 -211',
         ),
         parameterSets = cms.vstring(
             'pythia8CommonSettings',
