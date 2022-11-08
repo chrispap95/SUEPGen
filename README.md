@@ -10,7 +10,7 @@ cmsenv
 git clone https://github.com/chrispap95/SUEPGen.git
 scram b
 
-cmsDriver.py SUEPGen/Generator/SUEPdarkPho_cff \
+cmsDriver.py SUEPGen/Generator/SUEP_mMed-1000_mDark-2_temp-1_decay-leptonic_cff \
     -s GEN,SIM -n 20 \
     --datatier GEN-SIM --eventcontent RAWSIM \
     --conditions auto:phase1_2022_realistic \
