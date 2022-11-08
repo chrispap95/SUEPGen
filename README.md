@@ -2,7 +2,31 @@
 
 To generate SUEP samples:
 
-**New instructions:**
+**Old instructions:**
+```bash
+cmsrel CMSSW_12_6_0_pre4
+cd CMSSW_12_6_0_pre4/src
+cmsenv
+git clone https://github.com/chrispap95/SUEPGen.git
+scram b
+
+cmsDriver.py SUEPGen/Generator/SUEPdarkPho_cff \
+    -s GEN,SIM -n 20 \
+    --datatier GEN-SIM --eventcontent RAWSIM \
+    --conditions auto:phase1_2022_realistic \
+    --beamspot Realistic25ns13p6TeVEarly2022Collision \
+    --geometry DB:Extended --era Run3 \
+    --fileout file:step1.root
+
+cmsDriver.py step2 \
+    -s DIGI,L1,DIGI2RAW,HLT:@relval2022 -n 20 \
+    --conditions auto:phase1_2022_realistic \
+    --datatier GEN-SIM-DIGI-RAW --eventcontent RAWSIM \
+    --geometry DB:Extended --era Run3 \
+    --filein  file:step1.root --fileout file:step2.root
+```
+
+Old instructions:
 ```bash
 cmsrel CMSSW_12_4_3
 cd CMSSW_12_4_3/src
@@ -26,7 +50,7 @@ cmsDriver.py step2 \
     --filein  file:step1.root --fileout file:step2.root
 ```
 
-Old instructions: 
+Even older instructions: 
 ```bash
 cmsrel CMSSW_12_3_0_pre6
 cd CMSSW_12_3_0_pre6/src
